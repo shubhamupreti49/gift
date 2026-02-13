@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>For You</title>
+  <meta name="description" content="A tiny website made with love." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <header class="hero">
+
+    <div class="card">
+      <p class="eyebrow" id="toLine">To: <span id="toName">My Favorite Person</span></p>
+      <h1 id="headline">Happy Valentine’s Day</h1>
+      <p class="subhead" id="subhead">
+        I made this little site because I wanted you to have something you can open anytime.
+      </p>
+
+      <div class="pillRow">
+        <span class="pill" id="daysPill">Together: — days</span>
+        <span class="pill" id="todayPill">Today: —</span>
+      </div>
+
+      <div class="ctaRow">
+        <button class="btn" id="scrollBtn" type="button">Open the letter</button>
+        <button class="btn ghost" id="editBtn" type="button" title="Edit the message on this device">
+          Personalize
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="content" id="content">
+    <section class="section letter">
+      <h2>A letter</h2>
+      <p id="letterText">
+        Hey love — I’m grateful for you. Thank you for being you, for the laughs, the support,
+        and the way you make ordinary days feel like something to look forward to.
+      </p>
+      <p class="signature">
+        With all my heart,<br />
+        <span id="fromName">— Your Person</span>
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Three things I adore</h2>
+      <ul class="niceList" id="reasons">
+        <li>Your smile (it changes the whole room).</li>
+        <li>The way you care about people.</li>
+        <li>How you make “small moments” feel huge.</li>
+      </ul>
+      <p class="hint">Tip: click “Personalize” at the top to edit names + this list.</p>
+    </section>
+
+    <section class="section jar">
+      <h2>Mini memory jar</h2>
+      <p class="muted">Add tiny notes you want her to see later (saved in this browser).</p>
+
+      <div class="jarRow">
+        <input id="jarInput" class="input" type="text" maxlength="120" placeholder="Write a sweet note..." />
+        <button id="addJarBtn" class="btn" type="button">Add</button>
+      </div>
+
+      <ul id="jarList" class="jarList" aria-live="polite"></ul>
+
+      <div class="jarActions">
+        <button id="clearJarBtn" class="btn ghost" type="button">Clear notes</button>
+      </div>
+    </section>
+
+    <section class="section question">
+      <h2>Important question</h2>
+      <p class="big" id="questionLine">Will you be my Valentine?</p>
+
+      <div class="qa">
+        <button class="btn yes" id="yesBtn" type="button">Yes</button>
+        <button class="btn no" id="noBtn" type="button">No</button>
+      </div>
+
+      <p class="muted small" id="noHint">Try pressing “No” if you want to see something silly.</p>
+      <div class="answer" id="answerBox" hidden>
+        <p class="big">Yay. I choose you. Today and always.</p>
+        <p class="muted">Screenshot this page and send it to me.</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="muted small">Made with love. Hosted on GitHub Pages.</p>
+    </footer>
+  </main>
+
+  <dialog id="editDialog" class="dialog">
+    <form method="dialog" class="dialogCard">
+      <h3>Personalize</h3>
+
+      <label class="label">
+        To (her name)
+        <input class="input" id="toInput" type="text" placeholder="e.g., Aanya" />
+      </label>
+
+      <label class="label">
+        From (your name)
+        <input class="input" id="fromInput" type="text" placeholder="e.g., Pranav" />
+      </label>
+
+      <label class="label">
+        “Together since” date
+        <input class="input" id="sinceInput" type="date" />
+      </label>
+
+      <label class="label">
+        Letter text
+        <textarea class="textarea" id="letterInput" rows="4"></textarea>
+      </label>
+
+      <label class="label">
+        Three reasons (one per line)
+        <textarea class="textarea" id="reasonsInput" rows="4"></textarea>
+      </label>
+
+      <div class="dialogActions">
+        <button class="btn" value="save" id="saveBtn">Save</button>
+        <button class="btn ghost" value="cancel">Cancel</button>
+      </div>
+
+      <p class="muted small">
+        This saves to this device only (localStorage). If you want her to see your edits,
+        commit the changes in code instead.
+      </p>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
