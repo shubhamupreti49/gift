@@ -29,8 +29,8 @@ const els = {
 const STORAGE_KEY = "valentine_site_v1";
 
 const defaultState = {
-  to: "My Favorite Person",
-  from: "Your Person",
+  to: "My Ruchi",
+  from: "Your Shubham",
   since: "", // "2024-05-10"
   letter:
     "Hey love — I’m grateful for you. Thank you for being you, for the laughs, the support, and the way you make ordinary days feel like something to look forward to.",
