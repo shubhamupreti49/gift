@@ -35,8 +35,8 @@ const defaultState = {
   letter:
     "Hey love — I’m grateful for you. Thank you for being you, for the laughs, the support, and the way you make ordinary days feel like something to look forward to.",
   reasons: [
-    "Your smile (it changes the whole room).",
-    "The way you care about people.",
+    "Your smile changes my whole world.",
+    "The way you care about me makes forget everything.",
     "How you make “small moments” feel huge.",
   ],
   jar: [],
